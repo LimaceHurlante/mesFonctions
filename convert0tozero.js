@@ -50,6 +50,9 @@ function convert0tozero(_nombre) {
       } else {
         return dizaine(Math.floor(this.reste / 10)) + unite(this.reste % 10)
       }
+    } else if (this.reste == 71) {
+      // de 71
+      return dizaine(Math.floor(this.reste / 10)) + "et " + petiteDizaine(this.reste % 10)
     } else if (this.reste < 80) {
       // de 70 à 79
       return dizaine(Math.floor(this.reste / 10)) + petiteDizaine(this.reste % 10)
