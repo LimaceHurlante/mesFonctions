@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="">
+  <title>Testeur de fonction</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+  <h1>Cliquez sur ctrl+maj+i pour acceder à la console via chrome</h1>
+  <input id="input1"></input>
+  <button id="bouton1" onclick="convert()">Lance la fonction !</button>
+
+
+  <script src="/convert0tozero.js" async defer></script>
+  <script>
+    function convert() {
+      console.log(document.getElementById("input1").value);
+      let a = document.getElementById("input1").value;
+      a = parseInt(a, 10);
+      console.log(convert0tozero(a));
+    }
+  </script>
+</body>
+
+</html>
