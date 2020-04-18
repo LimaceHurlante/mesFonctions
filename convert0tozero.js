@@ -1,24 +1,4 @@
-/*
-
-
-
-essai 71 = soixante onze
-centaines au pluriels
-
-*/
-
-
-console.log(convert0tozero(9215));
-// for (let i = 0; i < 30; i++) {
-//   var b = Math.random(10000) * 10000;
-//   b = Math.floor(b);
-//   console.log("essai " + i + " - " + b + " = " + convert0tozero(b));
-// }
-
-for (let i = 0; i < 100; i++) {
-
-  console.log("essai " + i + " = " + convert0tozero(i));
-}
+//By LimaceHurlante 19/04/2020
 
 function convert0tozero(_nombre) {
   //Cette fonction recoit du texte puis retourne un texte en français correspondant
@@ -191,6 +171,11 @@ function convert0tozero(_nombre) {
 
   function centaine() {
     if (this.centaines > 1) {
+      if (this.reste == 0) {
+        return (unite(this.centaines) + " cents");
+      } else {
+        return (unite(this.centaines) + " cent ");
+      }
       return (unite(this.centaines) + " cent ");
     } else if (this.centaines == 1) {
       return "cent ";
