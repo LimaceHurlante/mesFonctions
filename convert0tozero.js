@@ -1,1 +1,1 @@
-// Cette fonction recoit du texte pois retourne un texte en français correspondant
+// Cette fonction recoit du texte puis retourne un texte en français correspondant
