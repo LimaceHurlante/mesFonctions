@@ -10,20 +10,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="">
 </head>
+<style type="text/css">
+  div {
+    padding-top: 20px;
+  }
+</style>
 
 <body>
-  <h1>Cliquez sur ctrl+maj+i pour acceder à la console via chrome</h1>
-  <input id="input1"></input>
-  <button id="bouton1" onclick="convert()">Lance la fonction !</button>
+  <h1>Testez la fonction nombre en chiffre vers texte :-)</h1>
+  <input id="input1" onchange="convert()"></input>
+  <button id="bouton1" type="submit" onclick="convert()" onSubmit="convert()">Lance la fonction !</button>
 
 
   <script src="/convert0tozero.js" async defer></script>
   <script>
+    focusMethod = function getFocus() {
+      document.getElementById("input1").focus();
+    }
+
+
     function convert() {
-      console.log(document.getElementById("input1").value);
+      // console.log(document.getElementById("input1").value);
       let a = document.getElementById("input1").value;
       a = parseInt(a, 10);
-      console.log(convert0tozero(a));
+      let b = convert0tozero(a);
+      var newDiv = document.createElement("div");
+      var newContent = document.createTextNode(a + " : " + b);
+      newDiv.appendChild(newContent);
+      document.getElementById("input1").value = "";
+      document.body.insertBefore(newDiv, null);
     }
   </script>
 </body>
